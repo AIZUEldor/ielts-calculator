@@ -45,7 +45,7 @@ namespace IeltsCalculator.Client
 
                     case "3":
                         exit = true;
-                        Console.WriteLine("\nDastur yakunlandi. Omad! 👋");
+                        Console.WriteLine("\nDastur yakunlandi. Omad! ");
                         break;
 
                     default:

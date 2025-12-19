@@ -63,20 +63,34 @@ namespace IeltsCalculator.Aplication.Servises
         {
             Console.WriteLine("===================================================");
             Console.WriteLine("Juddayam yaxshi endi Speakinga o'tamiz . Undan qancha bal oldingiz ? : ");
-            string javobs = Console.ReadLine();
-            return Convert.ToDouble(javobs);
+            double javobs = Convert.ToDouble( Console.ReadLine());
+            if(javobs < 0 || javobs > 9)
+            {
+                Console.WriteLine("Siz xato qiymat kirityapsiz !!!!! Iltimos qaytadan urinib ko'ring : ");
+                HisobSpeaking();
+            }
+            return javobs;
         }
 
         public double HisobWriting()
         {
             Console.WriteLine("===================================================");
-            Console.WriteLine("Endi Writing band ga o'tamiz :) Qanday bal oldingiz ? : ");
-            string javobw = Console.ReadLine();
-            return Convert.ToDouble(javobw);
+            Console.WriteLine("Endi Writing band ga o'tamiz :) Qanday bal oldingiz ?  Siz olgan balingiz  0 <= Balingiz <= 9  oraliqda bo'lishi kerak !!!! : ");
+
+            double javobw = Convert.ToDouble(Console.ReadLine());
+
+            if(javobw < 0 || javobw > 9)
+            {
+                Console.WriteLine("Siz xato qiymat kirityapsiz !!!!! Iltimos qaytadan urinib ko'ring : ");
+                HisobWriting();
+            }
+
+            return javobw;
         }
 
         public double HisobReading()
         {
+            
             Console.WriteLine("==============================================");
             Console.WriteLine("Yaxshi endi Readinga o'tamiz 40 tadan nechtasiga to'g'ri javop berdingiz ? : ");
 
@@ -100,7 +114,10 @@ namespace IeltsCalculator.Aplication.Servises
             else
             {
                 Console.WriteLine("Siz xato qiymat kirityapsiz !!!!!");
+                HisobReading();
             }
+            
+
 
             return summ2r;
         }
@@ -108,6 +125,7 @@ namespace IeltsCalculator.Aplication.Servises
 
         public double HisobListening()
         {
+            
             Console.WriteLine("Birinchi bo'lib Listening band ni xisoblaymiz : ");
             Console.WriteLine("Siz Listeningdan 40 tadan nechtasiga javop berdingiz ?");
             string javob = Console.ReadLine();
@@ -130,6 +148,7 @@ namespace IeltsCalculator.Aplication.Servises
             else
             {
                 Console.WriteLine("Siz xato qiymat kirityapsiz !!!!!");
+                HisobListening();
             }
 
             return summ2l;

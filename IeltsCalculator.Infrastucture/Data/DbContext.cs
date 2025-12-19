@@ -11,7 +11,7 @@ namespace IeltsCalculator.Infrastucture.Data
     {
         public DbContext()
         {
-            this.Ieltses = new Ielts[10];
+            this.Ieltses = new Ielts[23];
         }
 
         public Ielts[] Ieltses { get; set; }
