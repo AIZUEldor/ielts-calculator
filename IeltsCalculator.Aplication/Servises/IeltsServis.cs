@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using IeltsCalculator.Infrastucture.Data;
 using IletsCalculator.Domain.Models;
 
@@ -54,8 +55,12 @@ namespace IeltsCalculator.Aplication.Servises
             else if (Overall == 6) Console.WriteLine("Overall: 6 - Competent");
             else if (Overall == 5.5) Console.WriteLine("Overall: 5.5 - Modest");
             else if (Overall == 5) Console.WriteLine("Overall: 5 - Modest");
+            else
+            {
+                Console.WriteLine($"Overall: {Overall} - Siz o'zingizni ustingizda qayta ishlashingiz kerak yana anchaaa afsus :( ");
+            }
 
-            return Overall;
+                return Overall;
         }
 
 
